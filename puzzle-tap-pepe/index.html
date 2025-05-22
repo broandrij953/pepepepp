@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Pepe Tap NFT Game (9:16)</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="game">
+    <!-- Вкладки -->
+    <div id="tabHome" class="tab-content active">
+      <h1>🏠 Home</h1>
+      <p>Welcome to Pepe Tap NFT Game!</p>
+      <div class="pepe-container">
+        <img src="assets/pepe.png" alt="Pepe" id="pepe" />
+      </div>
+      <p>Coins: <span id="coins">0</span></p>
+      <button id="btnTap">Tap Pepe!</button>
+    </div>
+
+    <div id="tabUpgrade" class="tab-content">
+      <h1>⚙️ Upgrade</h1>
+      <p>Upgrade your tapping power here!</p>
+      <button id="btnUpgradePower">Upgrade Power (Cost: 10 coins)</button>
+      <p>Current Power: <span id="power">1</span></p>
+    </div>
+
+    <div id="tabReferrals" class="tab-content">
+      <h1>👥 Referrals</h1>
+      <p>Invite friends and earn rewards!</p>
+      <p>Your referral code: <strong>PEPE1234</strong></p>
+    </div>
+
+    <div id="tabChests" class="tab-content">
+      <h1>🧰 Chests</h1>
+      <p>Open chests to get puzzle pieces!</p>
+      <button id="btnOpenChest">Open Chest (Cost: 20 coins)</button>
+      <p>Puzzle pieces collected: <span id="puzzlePieces">0</span></p>
+    </div>
+
+    <div id="tabNFT" class="tab-content">
+      <h1>🔗 NFT</h1>
+      <p>View your NFT collection here.</p>
+      <div id="nftCollection">
+        <p>No NFTs yet.</p>
+      </div>
+    </div>
+
+    <!-- Нижнє меню -->
+    <div class="bottom-tabs">
+      <button id="btnHomeTab" class="active">🏠 Home</button>
+      <button id="btnUpgradeTab">⚙️ Upgrade</button>
+      <button id="btnReferralsTab">👥 Referrals</button>
+      <button id="btnChestsTab">🧰 Chests</button>
+      <button id="btnNFTTab">🔗 NFT</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Скидання */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.game {
+  position: relative;
+  width: 360px;       /* ширина типова для мобільного */
+  height: 640px;      /* 9:16 співвідношення сторін */
+  background: #111;
+  border: 3px solid #00ff00;
+  border-radius: 15px;
+  color: #00ff00;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 0 15px #00ff00aa;
+  overflow: hidden;
+}
+
+/* Вкладки */
+.tab-content {
+  display: none;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 70px; /* місце під меню */
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.pepe-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pepe-container img {
+  width: 180px;
+  height: auto;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 15px;
+  transition: transform 0.1s ease;
+}
+
+.pepe-container img:active {
+  transform: scale(0.9);
+}
+
+/* Кнопки */
+button {
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  padding: 12px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+/* Нижнє меню */
+.bottom-tabs {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  background: #000;
+  border-top: 2px solid #00ff00;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  gap: 6px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.bottom-tabs button {
+  flex-grow: 1;
+  border: none;
+  color: #00ff00;
+  font-size: 16px;
+  padding: 8px 5px;
+  border-radius: 10px;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.bottom-tabs button:hover,
+.bottom-tabs button.active {
+  background: #00ff00;
+  color: black;
+  font-weight: 700;
+}
